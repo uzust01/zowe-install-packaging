@@ -69,10 +69,6 @@
     },
     "org.zowe.licenses": {
       "version": "1.0.0"
-    },
-    "org.zowe.vtl.cli": {
-      "version": "0.1.0",
-      "artifact":
     }
   },
   "sourceDependencies": [{
@@ -298,15 +294,7 @@
         "tag": "master",
         "destinations": ["Visual Studio Code Marketplace"]
       }]
-    },
-    {
-      "componentGroup": "Zowe Velocity Template Language (VTL) Command-Line Interface",
-      "entries": [{
-        "repository": "vtl-cli",
-        "tag": "v0.1.0",
-        "destinations": ["Zowe PAX"]
-      }]
-    },
+    }
   ],
   "dependencyDecisions": {
     "rel": ".dependency/doc/dependency_decisions.yml"
