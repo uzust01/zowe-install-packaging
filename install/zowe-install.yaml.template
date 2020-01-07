@@ -4,8 +4,8 @@
 # zowe-install: The directory that zowe will be installed into
 install:
   rootDir=~/zowe/{ZOWE_VERSION}
-  userDir=~/zowe-user-dir
-  prefix=ZOWE
+  instanceDir=~/zowe-instance-dir
+  prefix=ZWE
   instance=1
   datasetPrefix={userid}.ZWE
 
@@ -42,16 +42,11 @@ zlux-server:
 terminals:
   sshPort=22
   telnetPort=23
-# security=tls
+# security=tls # The security type of the tn3270 connection - valid values are blank('') for telnet, or 'tls'. Defaults to blank
 
-# started task JCL member for Zowe job - these entries are not case-sensitive
-zowe-server-proclib:
-# dsName=SYS1.PROCLIB   # Example of required dataset name.  Do not enclose it in quotes.
-#  If you omit the 'dsName' tag or specify 'dsName=auto', 
-#  the install script scans the datasets in the PROCLIB concatenation 
-#  and places the JCL member in the first dataset where the installing 
-#  user has write access.  
-  dsName=auto
-  memberName=ZOWESVR
+keystore:
+  keystoreDirectory=/global/zowe/keystore
+  keystoreOwner=IZUSVR
+  keystoreGroup=IZUADMIN
 
 # Do not delete this last line
